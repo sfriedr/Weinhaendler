@@ -1,0 +1,4 @@
+Bestell-Nr;Weinname;Erzeuger;Jahrgang;Farbe;Herkunftsland;Anbaugebiet;Alkoholgehalt;Sulfite;Vegan;Geschmack;Parker-Punkte;Lagerauer;Flaschengroesse;Preis pro Flasche (Brutto);Preis pro Flasche (Netto);Preis pro Liter (Brutto);Preis pro Liter (Netto)
+2023-BBBB-1111;Wein_1;/;/;rot;Italien;Piemont;14,5;ja;nein;süß;100;1 Jahre;3;50;42,02;16,67;14,01
+2024-BBBB-1111;Wein_2;Bla;2006;rosé;Frankreich;;0;nein;ja;lieblich;86;2 Jahre;0,25;;;;
+2025-CCCC-3333;Wein_2;Husten;1983;rot;Frankreich;Bordeaux Côtes de Francs;12,5;nein;nein;lieblich;99;3 Jahre;0,25;50;42,02;200;168,08

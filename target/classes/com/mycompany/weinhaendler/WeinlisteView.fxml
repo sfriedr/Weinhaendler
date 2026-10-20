@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.weinhaendler.WeinlisteController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Bearbeiten">
+            <items>
+              <MenuItem fx:id="menuItemWeinLöschen" mnemonicParsing="false" onAction="#auswahlLöschen" text="Wein(e) löschen" />
+                  <MenuItem fx:id="menuItemAllesLöschen" mnemonicParsing="false" onAction="#allesLöschen" text="Alles löschen" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="wineTable" prefHeight="400.0" prefWidth="600.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="tableColumnBestellNr" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Bestellnummer" />
+          <TableColumn fx:id="tableColumnJahrgang" maxWidth="1.7976931348623157E308" minWidth="70.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Jahrgang" />
+            <TableColumn fx:id="tableColumnName" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Name" />
+            <TableColumn fx:id="tableColumnFarbe" maxWidth="1.7976931348623157E308" minWidth="70.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Farbe" />
+            <TableColumn fx:id="tableColumnBruttoflaschenpreis" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Bruttoflaschenpreis" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

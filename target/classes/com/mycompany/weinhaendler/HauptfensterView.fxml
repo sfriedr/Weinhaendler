@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="glossy-pane" stylesheets="@CSS-Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.weinhaendler.HauptfensterController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu text="_Datei">
+            <items>
+              <MenuItem onAction="#öffnen" text="_Öffnen" />
+                  <MenuItem fx:id="menuItemSpeichern" onAction="#speichern" text="_Speichern" />
+                  <MenuItem onAction="#speichernUnter" text="Speichern _unter" />
+                  <MenuItem fx:id="menuItemBeenden" onAction="#hauptfensterSchliessenMeldungErzeugen" text="B_eenden" />
+            </items>
+          </Menu>
+          <Menu text="_Bearbeiten">
+            <items>
+              <MenuItem fx:id="meniItemAusschneiden" text="Au_sschneiden" />
+                  <MenuItem fx:id="menuItemKopieren" text="_Kopieren" />
+                  <MenuItem fx:id="menuItemEinfuegen" text="_Einfügen" />
+            </items>
+          </Menu>
+          <Menu text="_Wein">
+            <items>
+              <MenuItem onAction="#weineingabeOeffnen" text="A_ufnehmen" />
+                  <MenuItem text="_Ändern" />
+                  <MenuItem fx:id="menuItemLoeschen" onAction="#löschen" text="_Löschen" />
+            </items>
+          </Menu>
+            <Menu text="_Ansicht">
+              <items>
+                <MenuItem onAction="#listeÖffnen" text="_Liste" />
+                  <MenuItem text="De_tails" />
+              </items>
+            </Menu>
+            <Menu text="_?">
+              <items>
+                <MenuItem onAction="#zeigeInfoDialog" text="_Info" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <StackPane layoutX="412.0" layoutY="25.0" prefHeight="164.0" prefWidth="142.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <ImageView fitHeight="164.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-shadow">
+               <image>
+                  <Image url="@Firmenlogo%20&amp;%20Name.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <Label layoutX="28.0" layoutY="44.0" text="Willkommen" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="44.0">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

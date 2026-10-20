@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="740.0" prefWidth="1200.0" stylesheets="@CSS-Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.weinhaendler.WeineingabeController">
+   <content>
+      <AnchorPane fx:id="anchorPane" prefHeight="740.0" prefWidth="1200.0">
+         <children>
+            <Label fx:id="labelBestellnummer" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="50.0" mnemonicParsing="true" prefWidth="98.0" text="* _Bestellnummer" />
+            <Label alignment="CENTER_RIGHT" layoutX="170.0" layoutY="85.0" mnemonicParsing="true" prefWidth="98.0" text="* Weinname" />
+            <Label alignment="CENTER_RIGHT" layoutX="170.0" layoutY="120.0" mnemonicParsing="true" prefWidth="98.0" text="Erzeuger" />
+            <Label alignment="CENTER_RIGHT" layoutX="170.0" layoutY="155.0" mnemonicParsing="true" prefWidth="98.0" text="Jahrgang" />
+            <Label fx:id="labelFarbe" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="208.0" mnemonicParsing="true" prefWidth="98.0" text="* _Farbe" />
+            <Label fx:id="labelHerkunftsland" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="263.0" mnemonicParsing="true" prefWidth="98.0" text="* _Herkunftsland" />
+            <Label alignment="CENTER_RIGHT" layoutX="170.0" layoutY="298.0" mnemonicParsing="true" prefWidth="98.0" text="Anbaugebiet" />
+            <Label fx:id="labelAlkoholgehalt" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="376.0" mnemonicParsing="true" prefHeight="17.0" prefWidth="106.0" text="* Alkohol_gehalt" />
+            <Label fx:id="labelGeschmack" alignment="CENTER_RIGHT" layoutX="174.0" layoutY="550.0" mnemonicParsing="true" prefWidth="98.0" text="G_eschmack" />
+            <Label fx:id="labelParker" alignment="CENTER_RIGHT" layoutX="600.0" layoutY="46.0" mnemonicParsing="true" prefWidth="98.0" text="_Parker-Punkte" />
+            <Label alignment="CENTER_RIGHT" layoutX="600.0" layoutY="81.0" mnemonicParsing="true" prefWidth="98.0" text="Lagerdauer (Jahre)" />
+            <Label alignment="CENTER_RIGHT" layoutX="598.0" layoutY="116.0" mnemonicParsing="true" prefHeight="17.0" prefWidth="104.0" text="* Flaschengröße" />
+            <Label fx:id="labelPreisProFlasche" alignment="CENTER_RIGHT" layoutX="600.0" layoutY="183.0" mnemonicParsing="true" prefWidth="98.0" text="* P_reis pro Flasche" />
+            <Label alignment="CENTER_RIGHT" layoutX="600.0" layoutY="268.0" mnemonicParsing="true" prefWidth="98.0" text="* Literpreis" />
+            <TextField fx:id="textfieldBestellnummer" layoutX="284.0" layoutY="46.0" prefHeight="25.0" prefWidth="103.0" promptText="2023-BBBB-1111" />
+            <TextField fx:id="textfieldWeinname" layoutX="284.0" layoutY="81.0" prefHeight="25.0" prefWidth="205.0" />
+            <TextField fx:id="textfieldErzeuger" layoutX="284.0" layoutY="116.0" prefHeight="25.0" prefWidth="205.0" />
+            <TextField fx:id="textfieldJahrgang" layoutX="284.0" layoutY="151.0" prefHeight="25.0" prefWidth="48.0" />
+            <VBox layoutX="284.0" layoutY="187.0" prefHeight="59.0" prefWidth="59.0" spacing="3.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" selected="true" text="weiß">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroupFarbe" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton mnemonicParsing="false" text="rot" toggleGroup="$toggleGroupFarbe" />
+                  <RadioButton mnemonicParsing="false" text="rosé" toggleGroup="$toggleGroupFarbe" />
+               </children>
+            </VBox>
+            <ComboBox fx:id="comboBoxHerkunftsland" layoutX="284.0" layoutY="259.0" onAction="#gebietZuLand" prefWidth="150.0" />
+            <ComboBox fx:id="comboBoxAnbaugebiet" layoutX="284.0" layoutY="295.0" prefHeight="25.0" prefWidth="191.0" />
+            <Spinner fx:id="spinnerAlkoholgehalt" layoutX="287.0" layoutY="373.0" prefHeight="25.0" prefWidth="79.0" />
+            <CheckBox fx:id="disableAlkoholCheckBox" layoutX="435.0" layoutY="375.0" mnemonicParsing="false" text="Alkoholfrei" />
+            <CheckBox fx:id="checkboxKeineSulfite" layoutX="287.0" layoutY="432.0" text="_Keine Sulfite" />
+            <CheckBox fx:id="checkboxVegan" layoutX="287.0" layoutY="461.0" mnemonicParsing="false" text="Vegan" />
+            <VBox layoutX="286.0" layoutY="509.0" prefHeight="99.0" prefWidth="100.0" spacing="3.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="trocken">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGoupGeschmack" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton mnemonicParsing="false" text="halbtrocken" toggleGroup="$toggleGoupGeschmack" />
+                  <RadioButton mnemonicParsing="false" text="lieblich" toggleGroup="$toggleGoupGeschmack" />
+                  <RadioButton mnemonicParsing="false" text="süß" toggleGroup="$toggleGoupGeschmack" />
+                  <RadioButton mnemonicParsing="false" selected="true" text="keine Angabe" toggleGroup="$toggleGoupGeschmack" />
+               </children>
+            </VBox>
+            <Label layoutX="826.0" layoutY="167.0" text="(€)" />
+            <Label layoutX="826.0" layoutY="202.0" text="(€)" />
+            <Label layoutX="826.0" layoutY="250.0" text="(€)" />
+            <Label layoutX="826.0" layoutY="286.0" text="(€)" />
+            <Separator layoutX="146.0" layoutY="340.0" prefWidth="915.0" />
+            <Separator layoutX="542.0" layoutY="14.0" orientation="VERTICAL" prefHeight="606.0" />
+            <Spinner fx:id="spinnerParker" layoutX="714.0" layoutY="44.0" prefHeight="25.0" prefWidth="83.0" />
+            <CheckBox fx:id="disableParkerCheckBox" layoutX="838.0" layoutY="48.0" mnemonicParsing="false" text="keine Angabe" />
+            <Spinner fx:id="spinnerLagerdauer" layoutX="714.0" layoutY="79.0" prefHeight="25.0" prefWidth="89.0" />
+            <CheckBox fx:id="disableLagerdauerCheckBox" layoutX="838.0" layoutY="82.0" mnemonicParsing="false" text="keine Angabe" />
+            <ComboBox fx:id="comboBoxFlaschengroeße" layoutX="714.0" layoutY="112.0" prefHeight="25.0" prefWidth="80.0" />
+            <TextField fx:id="textfieldFlaschenpreisButto" alignment="CENTER_RIGHT" layoutX="757.0" layoutY="163.0" prefWidth="61.0" />
+            <TextField fx:id="textfieldFlaschenpreisNetto" alignment="CENTER_RIGHT" layoutX="757.0" layoutY="198.0" prefWidth="61.0" />
+            <TextField fx:id="textfieldLiterpreisButto" alignment="CENTER_RIGHT" layoutX="757.0" layoutY="246.0" prefWidth="61.0" />
+            <TextField fx:id="textfieldLiterpreisNetto" alignment="CENTER_RIGHT" layoutX="757.0" layoutY="282.0" prefWidth="61.0" />
+            <Button fx:id="buttonSpeichern" layoutX="804.0" layoutY="657.0" onAction="#speichern" text="_Speichern" />
+            <Button fx:id="buttonAbbrechen" layoutX="717.0" layoutY="657.0" onAction="#abbrechen" text="_Abbrechen" />
+            <Label layoutX="372.0" layoutY="377.0" text="(Vol%)" />
+            <Label layoutX="800.0" layoutY="116.0" text="(l)" />
+            <Label layoutX="714.0" layoutY="167.0" text="brutto" />
+            <Label layoutX="714.0" layoutY="202.0" text="netto" />
+            <Label layoutX="714.0" layoutY="250.0" text="brutto" />
+            <Label layoutX="714.0" layoutY="286.0" text="netto" />
+            <TextArea layoutX="548.0" layoutY="384.0" prefHeight="95.0" prefWidth="487.0" />
+            <Label layoutX="753.0" layoutY="353.0" text="Weinbeschreibung">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="138.0" fitWidth="138.0" layoutX="560.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" styleClass="custom-label">
+               <image>
+                  <Image url="@Beispielbild.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="138.0" fitWidth="138.0" layoutX="722.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" styleClass="custom-label">
+               <image>
+                  <Image url="@Beispielbild.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="138.0" fitWidth="138.0" layoutX="885.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" styleClass="custom-label">
+               <image>
+                  <Image url="@Beispielbild.PNG" />
+               </image>
+            </ImageView>
+            <Button layoutX="446.0" layoutY="259.0" mnemonicParsing="false" onAction="#herkunftUndAnbauZurücksetzen" text="Zurücksetzen" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </content>
+</ScrollPane>
