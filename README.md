@@ -11,6 +11,7 @@ Durch das Hauptfenster der GUI kann der User sämtliche Funktionalitäten über 
 * Tabellarische Aufbereitung der internen Weindaten sowie Möglichkeit der Sortierung und Entfernung
 Anmerkung: Das Menü enthält noch weitere MenuItems ohne Funktionalitäten. Weitere Spielereien folgen.
 
+## tartbildschirm bzw. Hauptfenster der Anwendung
 ![Startbildschirm bzw. Hauptfenster der Anwendung](/docs/Screenshots/Hauptfenster.PNG "Hauptfenster")
 
 Die Weineingabe umfasst einen Dialog zur Eingabe von diversen Weinangaben (pflicht und optional). Dabei wird dem User eine möglichst große Ergonomie ermöglicht durch ...
@@ -23,8 +24,10 @@ Die Weineingabe umfasst einen Dialog zur Eingabe von diversen Weinangaben (pflic
 * Rückmeldungen in Form von Meldefenstern
 Sämtliche Weine werden als Objekte gespeichert und der internen Datenstruktur übergeben.
 
+## Weineingabe-Fenster
 ![Weineingabe-Fenster](/docs/Screenshots/Weineingabe.PNG "Wein anlegen")
 
 Des Weiteren bringt die tabellarische Zusammenfassung einen Überblick über die internen Weindaten. Sie können sortiert oder gelöscht werden.
 
+## Weinliste-Fenster
 ![Weinliste-Fenster](/docs/Screenshots/Weinliste.PNG "Weine")
