@@ -11,7 +11,7 @@ Durch das Hauptfenster der GUI kann der User sämtliche Funktionalitäten über 
 * Tabellarische Aufbereitung der internen Weindaten sowie Möglichkeit der Sortierung und Entfernung
 Anmerkung: Das Menü enthält noch weitere MenuItems ohne Funktionalitäten. Weitere Spielereien folgen.
 
-## tartbildschirm bzw. Hauptfenster der Anwendung
+## Startbildschirm bzw. Hauptfenster der Anwendung
 ![Startbildschirm bzw. Hauptfenster der Anwendung](/docs/Screenshots/Hauptfenster.PNG "Hauptfenster")
 
 Die Weineingabe umfasst einen Dialog zur Eingabe von diversen Weinangaben (pflicht und optional). Dabei wird dem User eine möglichst große Ergonomie ermöglicht durch ...
